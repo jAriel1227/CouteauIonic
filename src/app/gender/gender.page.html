@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Género</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="container mt-3 mb-2">
+      <ion-label  position="floating">Digita tu nombre</ion-label>
+      <ion-input  #termino type="text" placeholder="Entrar texto"style="border:none;border-bottom: 1px solid #FFEBCD  ;"></ion-input>
+      <ion-button expand="block" (click)="genero(termino.value)" color="secondary" class="mt-3">Comprobar</ion-button>
+    </ion-list>
+    <ion-list>
+      <ion-item *ngIf="data =='male'" color="primary" class="mt-2">Masculino</ion-item>
+      <ion-item *ngIf="data =='female'" color="danger" class="mt-2">Femenina</ion-item>
+    </ion-list>
+  </ion-content>
+
